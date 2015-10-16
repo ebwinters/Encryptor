@@ -25,6 +25,7 @@ def initialize():
 
 def menu_loop():
 	"""Show the menu"""
+	clear()
 	choice = None
 
 	while choice != 'q':
@@ -36,6 +37,9 @@ def menu_loop():
 		if choice in menu:
 			menu[choice]()
 
+def clear():
+	os.system('cls' if os.name == 'nt' else 'clear')
+
 def send_message():
 	"""Send an encrypted message"""
 
@@ -46,8 +50,8 @@ def search_for_code():
 	"""Search the database for a code to receive a message"""
 
 menu = OrderedDict([
-	('send', send_message),
-	('read', read_message),
+	("'send'", send_message),
+	("'read'", read_message),
 	])
 
 if __name__ == '__main__':

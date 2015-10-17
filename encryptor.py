@@ -208,7 +208,7 @@ def send_message():
 			Message.create(content=data, code=code)
 			print('Message sent')
 			print('Copy this key, you will need it to receive a message code: ')
-			print(code)
+			cprint(code, 'green')
 
 
 def read_message(search_query=None):
@@ -267,7 +267,7 @@ def decrypt_message(message):
 		tracker = tracker + 1
 
 	print("The message reads as follows: ")
-	print(final_string)
+	cprint(final_string, 'green')
 	delete_choice = input("Do you want this message to automatically delete? [y/n]: ").lower()
 
 	if delete_choice != 'n':

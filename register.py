@@ -1,4 +1,5 @@
 #!/user/bin/env python3
+import encryptor
 from peewee import *
 from termcolor import colored, cprint
 from collections import OrderedDict
@@ -74,4 +75,4 @@ if __name__ == '__main__':
 	initialize()
 	menu_loop()
 
-
+#Now that encryptor is imported, call menu loop and see if it works...

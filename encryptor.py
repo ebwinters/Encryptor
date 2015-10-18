@@ -19,20 +19,21 @@ class Message(Model):
 	class Meta:
 		database = db
 #necessary stuff
+#UPDATE THIS SHIT
 def door_0(num):
-	return num-2
+	return num*2
 
 def door_1(num):
-	return num+3
+	return num*77
 
 def door_2(num):
 	return num*10
 
 def door_3(num):
-	return num*6
+	return num*62
 
 def door_4(num):
-	return num+9
+	return num*9
 
 def door_5(num):
 	return num-5
@@ -41,10 +42,10 @@ def door_6(num):
 	return num*3
 
 def door_7(num):
-	return num+8
+	return num*8
 
 def door_8(num):
-	return num+0
+	return num*4
 
 def door_9(num):
 	return num-10
@@ -128,7 +129,6 @@ def send_message():
 	def hash(letter):
 		list_index = None
 		string_random = ''
-		print ('\n')
 		temp = ord(letter)
 		# print (temp)
 		random_number = random.randrange(0, 10, 1)
@@ -243,23 +243,23 @@ def decrypt_message(message):
 		real_value = None
 
 		if temp_rand == 0:
-			temp_switched = int(temp_switched + 2)
+			temp_switched = int(temp_switched / 2)
 		if temp_rand == 1:
-			temp_switched = int(temp_switched - 3)
+			temp_switched = int(temp_switched / 77)
 		if temp_rand == 2:
 			temp_switched = int(temp_switched / 10)
 		if temp_rand == 3:
-			temp_switched = int(temp_switched / 6)
+			temp_switched = int(temp_switched / 62)
 		if temp_rand == 4:
-			temp_switched = int(temp_switched - 9)
+			temp_switched = int(temp_switched / 9)
 		if temp_rand == 5:
 			temp_switched = int(temp_switched + 5)
 		if temp_rand == 6:
 			temp_switched = int(temp_switched / 3)
 		if temp_rand == 7:
-			temp_switched = int(temp_switched - 8)
+			temp_switched = int(temp_switched / 8)
 		if temp_rand == 8:
-			temp_switched = int(temp_switched + 0)
+			temp_switched = int(temp_switched /4)
 		if temp_rand == 9:
 			temp_switched = int(temp_switched + 10)
 		final_string = final_string + chr(temp_switched)
@@ -298,6 +298,6 @@ if __name__ == '__main__':
 	initialize()
 	menu_loop()
 
-
+#3
 
 

@@ -1,5 +1,5 @@
 #!/user/bin/env python3
-import encryptor
+from encryptor import *
 from peewee import *
 from termcolor import colored, cprint
 from collections import OrderedDict

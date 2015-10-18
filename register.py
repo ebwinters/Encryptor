@@ -20,7 +20,7 @@ def initialize():
 	db.connect()
 	db.create_tables([User], safe=True)
 
-def menu_loop():
+def menu_loop1():
 	"""Show the menu"""
 	choice = None
 
@@ -59,8 +59,10 @@ def sign_in():
 	if p == realp:
 		print("user is real")
 		is_signed_in = True
+		clear()
+		menu_loop()
 	else:
-		print("fuck you")
+		print("invalid")
 
 
 def clear():
@@ -73,6 +75,6 @@ menu = OrderedDict([
 
 if __name__ == '__main__':
 	initialize()
-	menu_loop()
+	menu_loop1()
 
 #Now that encryptor is imported, call menu loop and see if it works...
